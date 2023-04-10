@@ -70,9 +70,26 @@ List<Item> items=new ArrayList<>();
         return name;
     }
 
+    public int getOrderTotal(List<String> selectedItems) {
+        int total = 0;
+        for (String itemName : selectedItems) {
+            for (Item item : menu) {
+                if (item.getName().equals(itemName)) {
+                    total += item.getPrice();
+                    break;
+                }
+            }
+        }
+        return total;
+    }
 
-
-
+//implemented features to calculate total value
+    //1-create a method for get order total
+    //2-take a total as -0;
+    //ittirate through selectedItems
+    //ittirate through menu items
+    //compare menu item and selected item
+    //return total of menu price
 
 
 }
